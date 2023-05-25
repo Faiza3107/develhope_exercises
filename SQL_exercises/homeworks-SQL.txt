@@ -1,0 +1,76 @@
+exercise 1			
+			
+SELECT*FROM salesman			
+SELECT (names, commissions) FROM salesman			
+			
+			
+exercise 2			
+			
+SELECT 50+50			
+SELECT 'This is SQL Exercise, Practice and Solution'			
+			
+exercise 3			
+			
+SELECT 10+15			
+			
+exercise 4			
+			
+SELECT surnames FROM clients			
+SELECT names FROM clients			
+SELECT names, surnames FROM clients			
+SELECT names, surnames, cities FROM clients			
+SELECT * FROM clients			
+			
+			
+exercise 5			
+SELECT names, surname FROM clients WHERE salary > 3000			
+SELECT names , surname FROM clients WHERE city = 'Rimini'			
+SELECT names, surname FROM clients WHERE city = 'Rimini' AND salary > 3000			
+SELECT surname, name, salary FROM clients WHERE age BETWEEN 20 and 35			
+SELECT surname, name, salary FROM clients WHERE city = 'Rimini' AND (age <20 OR age >30)			
+			
+exercise 6			
+SELECT MAX (salary) FROM clients			
+SELECT AVG (AGE) FROM clients			
+SELECT MAX (salary) FROM clients WHERE city = 'Rimini'			
+SELECT MAX (salary) FROM clients WHERE age BETWEEN 25 and 40			
+SELECT COUNT (*) FROM clients WHERE age <25 OR age >35			
+			
+exercise 7
+SELECT AVG(age) FROM clients
+SELECT AVG(age) FROM clients GROUP BY city 
+SELECT MAX(salary) FROM clients WHERE city = 'Rimini'
+SELECT name, COUNT(*) citizens, AVG(age) GROUP BY city
+SELECT name, COUNT(*) citizens FROM clients GROUP BY city ORDER BY COUNT(*) inhabitants;
+
+
+exercise 8 
+
+SELECT MAX(GRADE) FROM customer GROUP BY city;
+
+exercise 9 
+SELECT customer_id, ord_date,MAX(purch_amt) FROM orders GROUP BY customer_id, ord_date;
+HAVING MAX(purch_amt) BETWEEN 2000 AND 6000;
+
+Exercise 10
+SELECT customer_id, MAX(purch_amt) FROM orders WHERE customer_id BTEWEEN 3002 AND 3007 GROUP BY customer;
+
+exercise 11
+
+SELECT salesperson_id, MAX(purch_amt), FROM prders GROUP BY salesman_id;
+HAVING salesman_id BETWEEN 5003 AND 5008
+
+
+Exercise 12
+
+SELECT COUNT(*)FROM salesman WHERE city IS NOT NULL;
+
+Exercise 13
+SELECT SUM (dpt_allotment) FROM emp_department;
+
+
+TASK
+
+SELECT project code, COUNT (department no), AVG(hourly rate), COUNT (employee no) FROM projects details GROUP BY project code HAVING hourly rate > 15; 
+
+		
